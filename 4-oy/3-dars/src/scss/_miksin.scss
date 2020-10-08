@@ -1,0 +1,35 @@
+// @mixin font($fs,$color) {
+//     font-size: #{$fs}px;
+//     font-weight: bolder;
+//     div{
+//         border:1px solid $color;
+//     }
+// }
+
+// @mixin yangisi {
+//     color:pink;
+// }
+// @mixin box-shadow($arr...) {
+//     box-shadow: $arr;
+// }
+// @mixin apply-li {
+//     li{
+//         @content;
+//     }
+//     a{
+//         @content; 
+//     }
+// }
+// @mixin google-font-load($name){
+//     @import url("https://fonts.googleapis.com/css2?family=#{$name}");
+// }
+@mixin large-screen{
+    @media only screen and (max-width:960px) {
+        @content;
+    }
+}
+@mixin normal-screen{
+    @media only screen and (max-width:600px) {
+        @content;
+    }
+}

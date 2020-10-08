@@ -1,0 +1,15 @@
+@import 'normal.css';
+#c1,#c2{
+    width: 400px;
+    height: 200px;
+    border:1px solid red;
+    margin-top: 20px;
+    margin-left: 20px;
+    background: url('../img/setka.png');
+}
+
+#c2{
+    width: 600px;
+    height: 600px;
+    background: none;
+}

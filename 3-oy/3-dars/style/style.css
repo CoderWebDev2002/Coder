@@ -1,0 +1,46 @@
+
+@import 'normal.css';
+#tepaga{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 50px;
+    display: none;
+}
+#tepaga:hover{
+    cursor: pointer;
+}
+span{
+    color:red;
+}
+
+#slider{
+    width: calc(64px * 7);
+    height: 64px;
+    position: relative;
+    left: 0;
+    transition: all ease 0.2s;
+}
+
+#palasa{
+    overflow: hidden;
+    border:1px solid red;
+    width: calc(64px * 3);
+    margin: 20px 300px;
+
+}
+#palasa img{
+    float: left;
+}
+
+#scroll_left{
+    position: absolute;
+    left: 274px;
+    top: 945px;
+}
+#scroll_right{
+    position: absolute;
+    left: 494px;
+    top: 945px;
+}
+

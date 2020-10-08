@@ -1,0 +1,203 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+@import 'normal.css';
+.gradient-l{
+    width: 200px;
+    height: 200px;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(94,66,66,1)), color-stop(44%, rgba(5,215,249,1)), to(rgba(211,255,0,1)));
+    background: -webkit-linear-gradient(left, rgba(94,66,66,1) 0%, rgba(5,215,249,1) 44%, rgba(211,255,0,1) 100%);
+    background: -moz-linear-gradient(left, rgba(94,66,66,1) 0%, rgba(5,215,249,1) 44%, rgba(211,255,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(94,66,66,1) 0%, rgba(5,215,249,1) 44%, rgba(211,255,0,1) 100%);
+    background: linear-gradient(90deg, rgba(94,66,66,1) 0%, rgba(5,215,249,1) 44%, rgba(211,255,0,1) 100%);
+    /* background: radial-gradient(30px 20px, farthest-side, #fff, #000); */
+}
+@-webkit-keyframes myAnimation{
+    0%{
+        color:red;
+        background-color: blue;
+
+    }
+    50%{
+        background-color: black;
+    }
+    70%{
+    }
+    100%{
+        color:yellow;
+        background-color: brown;
+        height: 100px;
+        margin-left: 100px;
+
+    }   
+}
+@-moz-keyframes myAnimation{
+    0%{
+        color:red;
+        background-color: blue;
+
+    }
+    50%{
+        background-color: black;
+    }
+    70%{
+    }
+    100%{
+        color:yellow;
+        background-color: brown;
+        height: 100px;
+        margin-left: 100px;
+
+    }   
+}
+@-o-keyframes myAnimation{
+    0%{
+        color:red;
+        background-color: blue;
+
+    }
+    50%{
+        background-color: black;
+    }
+    70%{
+    }
+    100%{
+        color:yellow;
+        background-color: brown;
+        height: 100px;
+        margin-left: 100px;
+
+    }   
+}
+@keyframes myAnimation{
+    0%{
+        color:red;
+        background-color: blue;
+
+    }
+    50%{
+        background-color: black;
+    }
+    70%{
+    }
+    100%{
+        color:yellow;
+        background-color: brown;
+        height: 100px;
+        margin-left: 100px;
+
+    }   
+}
+@-webkit-keyframes newanimation {
+    /* 0%,100%{   
+        left:0;
+    }
+    50%{
+        left:90%;
+    } */
+    0%{
+        left:0;
+    }
+    100%{
+        left:90%;
+    }
+}
+@-moz-keyframes newanimation {
+    /* 0%,100%{   
+        left:0;
+    }
+    50%{
+        left:90%;
+    } */
+    0%{
+        left:0;
+    }
+    100%{
+        left:90%;
+    }
+}
+@-o-keyframes newanimation {
+    /* 0%,100%{   
+        left:0;
+    }
+    50%{
+        left:90%;
+    } */
+    0%{
+        left:0;
+    }
+    100%{
+        left:90%;
+    }
+}
+@keyframes newanimation {
+    /* 0%,100%{   
+        left:0;
+    }
+    50%{
+        left:90%;
+    } */
+    0%{
+        left:0;
+    }
+    100%{
+        left:90%;
+    }
+}
+.left{
+    top:0;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: burlywood;
+    -webkit-animation: newanimation 3s linear infinite;
+       -moz-animation: newanimation 3s linear infinite;
+         -o-animation: newanimation 3s linear infinite;
+            animation: newanimation 3s linear infinite;
+    animation-direction: reverse;
+    -webkit-animation-direction: alternate;
+       -moz-animation-direction: alternate;
+         -o-animation-direction: alternate;
+            animation-direction: alternate;
+     /*animation-direction: alternate-reverse; */
+}
+.animation{
+    -webkit-animation-name: myAnimation;
+       -moz-animation-name: myAnimation;
+         -o-animation-name: myAnimation;
+            animation-name: myAnimation;
+    -webkit-animation-duration: 1s;
+       -moz-animation-duration: 1s;
+         -o-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+       -moz-animation-timing-function: linear;
+         -o-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 0.5s;
+       -moz-animation-delay: 0.5s;
+         -o-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+         -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+.block2{
+    -webkit-animation-name: myAnimation;
+       -moz-animation-name: myAnimation;
+         -o-animation-name: myAnimation;
+            animation-name: myAnimation;
+    -webkit-animation-duration: 0.5s;
+       -moz-animation-duration: 0.5s;
+         -o-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-in;
+       -moz-animation-timing-function: ease-in;
+         -o-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+         -o-animation-iteration-count: infinite;
+
+
+}

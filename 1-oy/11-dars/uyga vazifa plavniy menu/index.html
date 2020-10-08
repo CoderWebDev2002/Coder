@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        menu{
+            text-align: center;
+            cursor: pointer;
+
+        }
+        menu > li {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            background-color: blueviolet;
+            height: 20px;
+            overflow: hidden;
+            vertical-align: top;
+            transition: height 0.2s linear 0.2s;
+        }
+        menu ul{
+            position: absolute;
+            top:0;
+            left:0px;
+            padding-inline-start: 0;
+            list-style: none;
+            background-color: blueviolet;
+            margin:20px auto 0;
+            width: 100%;
+        }
+        menu > li:nth-child(2):hover{
+            height: 76px;
+
+        }
+        menu li li:hover{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <menu>
+        <li>menu1</li>
+        <li>menu2
+            <ul>
+                <li>podmenu1</li>
+                <li>podmenu2</li>
+                <li>podmenu3</li>
+            </ul>
+        </li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </menu>
+</body>
+</html>

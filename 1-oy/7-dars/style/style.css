@@ -1,0 +1,73 @@
+@charset 'UFT-8';
+@import 'normal.css';
+
+.row{
+    width: 300px;
+    height: 300px;
+    border:1px solid red;
+    position: relative;
+}
+.square,.oval,.oval2{
+    height: 50px;
+    margin-left: 2px;
+    position: absolute;
+
+
+}
+.square{
+    width: 50px;
+    border-radius: 50%;
+    background-color: chocolate;
+    position: fixed;
+    top:2px;
+    right:0;
+    left:50px;
+    border:1px solid red;
+    z-index: 1;
+}
+.oval{
+    width: 150px;
+    background-color: green;
+    z-index: 3;
+
+}
+
+.oval2{
+    width: 150px;
+    background-color: red;
+    z-index: 2;
+    left:50px
+}
+.overflow{
+    width: 200px;
+    height: 100px;
+    background-color: pink;
+    /* overflow: hidden; */
+    overflow: scroll;
+    word-wrap:break-word ;
+    white-space: pre-wrap;
+    border:1px solid #000;
+
+}
+
+.overflow2{
+    width: 300px;
+    height: 300px;
+    border:1px solid red;
+    overflow: hidden;
+}
+.overflow2 div{
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+    
+
+}
+.visibly{
+    visibility: visible;
+    background-color: yellow;
+}
+.opacity{
+    background-color: aqua;
+    opacity: 1;
+}

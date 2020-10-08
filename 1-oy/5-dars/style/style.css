@@ -1,0 +1,14 @@
+.qizil{
+    /* width: 500px; */
+    width: 100%;
+    max-width: 1200px;
+    min-width: 700px;
+    height: 200px;
+    height: 50vh;
+}
+div div{
+    width: 200px;
+}
+div .class{
+    background-color: red;
+}

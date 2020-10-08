@@ -1,0 +1,40 @@
+.bir{
+	position: relative;
+	height: 500px;
+	width: 500px;
+}
+.ikki{
+	width:500px;
+	height: 500px;
+	background-color: red;
+	position: absolute;
+	z-index:1; 
+
+}
+.uch{
+	width: 200px;
+	height: 200px;
+	background-color: yellow;
+	position: absolute;
+	bottom:0;
+	right:0;
+
+	z-index:2;
+}
+
+
+.oval {
+	background-color: red;
+	height: 250px;
+	width: 250px;
+	border: 1px solid black;
+	z-index: 3;
+	top:0;
+	position: fixed;
+	right: 10px;
+
+
+}
+.pustoy{
+	height: 2000px;
+}

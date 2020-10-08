@@ -1,0 +1,144 @@
+// @var: 100%;
+// .a{
+//     background-color: red;
+//     color:white;
+//     font-size: 17px;
+//     width: #111111 + #222222;
+// }
+
+// .testmixin(@bgc,@color,@fs){
+//     background-color: @bgc;
+//     color:@color;
+//     font-size: @fs;
+// }
+// .testmixin(@test,@test2){
+//     overflow: @test;
+//     visibility: @test2;
+// }
+// .testmixin(@param){
+//     @var: 100px;
+//     border:1px solid @param;
+// }
+// .border(@width,@style,@color){
+//     border:@arguments;
+// }
+
+// .bgc(@width,@height){
+//     width: @width;
+//     height: @height;
+//     .mynewmixin(@padding:50px){
+//         padding: @padding;
+//         font-size: @var;
+//     }
+// }
+
+// .button{
+//     color:red;
+//     &:hover{
+//         &.test{
+//             background-color: yellowgreen;
+//         }
+//         color:yellow;
+//     }
+//     &__active{
+//         color:silver;
+//     }
+// }
+
+// .b{
+//     color:yellow;
+//     .a;
+//     border:1px solid red;
+//     &:hover{
+//         &:active{
+//             overflow: hidden;
+//         }
+//         background-color: silver;
+//     }
+// }
+
+// .mytestclass{
+//     .testmixin(green,blue,red) !important;
+//     .border(3px,dashed,red) ;
+// }
+// .newclass{
+//     .testmixin(red);
+//     .bgc(55px,100px);
+//     .mynewmixin(5px);
+//     max-width: @var;
+    
+// }
+// .test{
+//     &.test2{
+//         color:red;
+//     }
+//     & .test2{
+//         color:green;
+//     }
+// }
+// .btn{
+//     display: inline;
+//     color:red;
+//     background-color: blue;
+//     & .btn_red{
+//        font-weight: bold;
+//     }
+// }
+// .e .btn{
+//     border:1px dashed black;
+// }
+
+// .btn a{
+//     width: 100%;
+// }
+// .button{
+//     &:extend(.btn all);
+//     border:1px solid red;
+// }
+
+// .real_not_completed{
+//     width: ~"100% - 10px";
+// }
+
+// .loop(@i) when (@i<5){
+//     width: @i * 10px;
+//     .loop(@i + 1);
+// }
+
+// .test{
+//     width: 10px;
+//     .loop(1);
+// }
+
+// .col-xs-1{
+//     width: 100% / 12;
+// }
+// .col-xs-12{
+//     width: 100% ;
+// }
+
+// .bootstrapGenerateSize(@n,@name,@i:1) when (@i <= @n){
+//     .col-@{name}-@{i}{
+//         width: 100% * @i / @n;
+//     }
+//     .bootstrapGenerateSize(@n,@name, @i + 1);
+// }
+
+// .bootstrapGenerateSize(12,xs);
+// .bootstrapGenerateSize(12,lg);
+//asasd
+
+@import (less) "test";
+@import (css) "normal.css";
+
+body{
+    background-color: @bgc;
+    color:rgb(255, 255, 255)
+}
+
+button{
+    background-color:green;
+    &:hover{
+        background-color:lighten(green, 20%);
+    }
+}

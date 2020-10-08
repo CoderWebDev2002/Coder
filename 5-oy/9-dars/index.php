@@ -1,117 +1,188 @@
+<h1>Matematika!</h1>
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-function bot($method, $data = [], $token = '1136805868:AAEplrEy1LOJmRwhfJdOFjqXnsM5PVhgXCs')
-{
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'https://api.telegram.org/bot' . $token . '/' . $method);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $res = curl_exec($ch);
-    return json_decode($res);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+@include 'functions.php';
+
+//Математические функции Строковые функции Функции для работы с массивами
+
+echo M_PI.'<br>';
+echo M_E.'<br>';
+echo M_PI_2.'<br>';
+echo M_PI_4.'<br>';
+echo abs(-3).'<br>';
+echo round(3.541414,2).'<br>';
+
+echo floor(3.999).'<br>';
+echo ceil(4.00000001).'<br>';
+echo mt_rand(1,10);
+
+for($i=0;$i<=10;$i++){
+    $arr[] = mt_rand(1,100);
 }
-if (count($_POST))
-{
-    list($age, $chat_id, $surname, $name) = $_POST;
-    $json = bot('sendMessage', ['chat_id' => $_POST['chat_id'], 'text' => "Assalomu aleykum <b>{$_POST['name']} {$_POST['familya']}</b>! Sizning <b>{$_POST['age']}</b> yoshingiz bilan tabriklayman!", 'parse_mode' => 'HTML']);
-    die(json_encode($json));
-}
+debug($arr);
+
+echo min($arr).'<br>';
+echo max($arr).'<br>';
+echo base_convert(100,10,2).'<br>';
+
+echo sin(90).'<br>';
+echo cos(90).'<br>';
+echo tan(90).'<br>';
+echo 1/tan(90).'<br>';
+
+
+echo asin(0.5).'<br>';
+echo acos(90).'<br>';
+echo atan(90).'<br>';
+echo (M_PI / 2 - atan(90)).'<br>';
+echo rad2deg(asin(0.5)).'<br>';
+echo deg2rad(30).'<br>';
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-</head>
-<body>
-    <!-- <button id="button">Yuborish</button> -->
-    <div class="page hide"></div>
-    <form  method="POST" class='form '>
-        
-    Chat_id: <input type="text" name="chat_id"><br>
-    Name: <input type="text" name="name"><br>
-    Surname: <input type="text" name="surname"><br>
-    Age: <input type="text" name="age"><br>
-    <button type="button" id="button">Button</button>
-    </form>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-    
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<script>
-    // document.querySelector('#button').addEventListener('click',test);
-// let chat_id = prompt('chat_idni kiriting');
-// let yosh = prompt('Yoshizi kiritng:');
-// let name = prompt('Ismizi kiriting kiritng:');
-// let username = prompt('Familyezi kiriting kiritng:');
-// var form = new FormData();
-// form.append("chat_id", chat_id);
-// form.append("age", yosh);
-// form.append('name',name);
-// form.append('familya',username);
-//          function test(){
-// var settings = {
-//   "url": "http://codelife1.lc/5-oy/9-dars/index.php",
-//   "method": "POST",
-//   "processData": false,
-//   "contentType": false,
-//   "mimeType": "multipart/form-data",
-//   "data": form
-// }
-// $.ajax(settings).done(function (response) {
-//   console.log(response);
-// });
-// }
-// fetch('http://codelife1.lc/5-oy/9-dars/index.php',{
-//     method: 'POST',
-//     body:form
-// })
-// .then(function(value){
-//     return value.json();
-// })
-// .then(function(data){
-// }).catch(function(error){
-//     console.log(error);
-// });
-async function test() {
-var form = new FormData();
-form.append("chat_id", document.querySelector('[name="chat_id"]').value);
-form.append("age", document.querySelector('[name="age"]').value);
-form.append('name', document.querySelector('[name="name"]').value);
-form.append('familya', document.querySelector('[name="surname"]').value);
-let request = await fetch('http://codelife1.lc/5-oy/9-dars/index.php', {
-    method: 'POST',
-    body: form
-});
-let data = await request.json();
-console.log(data);
-if (data.ok) {
-    document.querySelector('.page').innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">Habar yuborildi<button type="button" class="close-success-button">Qaytadan yuborish</button><button type="button" class="close " data-dismiss="alert" aria-label="Close"><span aria-hidden="true" >&times;</span></button></div>';
-    $('.form').hide(500);
-    $('.page').show(1000);;
-} else {
-    document.querySelector('.page').innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert">Xatolik: ' + data.description + '<button type="button" class="close " data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
+<hr>
+<h1>Stringlar</h1>
+<?php
+$s_1 = 'Hello worldello';
+$s_2 = 'Привет мирр';
+
+echo $s_1[0].'<br>';
+echo $s_2[0].'<br>';
+
+echo strlen($s_1).'<br>';
+echo strlen($s_2).'<br>';
+echo strlen("👨‍💻").'<br>';
+echo strlen("😊").'<br>';
+
+echo mb_strlen($s_1,'UTF-8').'<br>';
+echo mb_strlen($s_2,'UTF-8').'<br>';
+
+echo strpos($s_1,'1ello').'<br>';
+
+
+if(strpos($s_1,'Hello') !== false){
+    echo 'Bor!'.'<br>';
+}else {
+    echo "Yo'q<br>";
 }
-// .then(function(value){
-//     return value.json();
-// })
-// .then(function(data){
-// }).catch(function(error){
-//     console.log(error);
-// });
+
+$s_3 = 'ықққҚasdasd';
+
+$search = mb_strpos($s_3,'Қa');
+
+// echo $s_3[$search];
+
+echo $search.'<br>';
+if($search !== false){
+    echo 'Bor!'.'<br>';
+}else {
+    echo "Yo'q<br>";
 }
-document.querySelector('#button').addEventListener('click', test);
-$('.close-success-button').click(function() {
-console.log('123');
-location.reload();
+
+echo substr($s_1,0,5).'<br>';
+echo substr($s_1,3).'<br>';
+echo mb_substr($s_3,4,1).'<br>';
+$email = '               asd asd sa@mail.ru                    ';
+echo trim($email).'<br>';
+$javoxir = 'Javoxir xi xi Xi';
+echo str_replace('xi','h1',$javoxir).'<br>';
+
+$text = "Assalomu aleykum ^name^! Siz bizning ^site^ saytimizda ro'yxatdan o'tdingiz вқ";
+
+
+if(true){
+    $text = str_replace(['^name^','^site^','вқ'],['Jayson','codelife.uz',''],$text);
+    echo $text.'<br>';
+}
+echo mb_strtolower('LSLDLSKDKL sss').'<br>';
+echo mb_strtoupper('LSLDLSKDKL sss').'<br>';
+
+$tt = '<b>asdasdasd';
+
+
+echo $tt = strip_tags($tt).'<br>';
+
+echo "Assalomu aleykum $tt?Qalaysiz ishlar joyidami".'<br>';
+
+
+$password = "test".'202cb962ac59075b964b07152d234b70'.'1999';
+$parol = 1234;
+echo md5(123).'<br>';
+
+
+if('test'.md5($parol).'1999' == $password){
+    echo 'parol togri ekan!'.'<br>';
+}else {
+    echo 'parol notogri'.'<br>';
+}
+
+echo uniqid();
+
+?>
+
+<hr>
+Array
+
+<?php
+
+
+$array = [1000,1,5,4,1,2,5,10,10,1000,1000,1000];
+$uniq_array = array_unique($array);
+
+debug($uniq_array);
+shuffle($uniq_array);
+
+debug($uniq_array);
+
+$rever_array = array_reverse($uniq_array,true);
+$array_flip = array_flip($uniq_array);
+
+debug($rever_array);
+debug($array_flip);
+
+
+$myarray = ['key'=>'test','key2'=>'test2','key3'=>'test3'];
+
+debug(array_values($myarray));
+debug(array_keys($myarray));
+
+
+
+$arr1 = [1,2,3,4];
+$arr2 = [5,6,7,8];
+$newarr = array_merge($arr1,$arr2);
+debug($newarr);
+
+$list = range(1,100,2);
+
+debug($list);
+
+$slice_array = array_slice($newarr,3);
+
+debug($slice_array);
+
+
+$list = [5,10,7,3,-1,2];
+
+// sort($list);
+
+// debug($list);
+
+// asort($list);
+
+// debug($list);
+
+arsort($list);
+
+debug($list);
+
+uasort($list,function($a,$b){
+    return  1;
 });
-<
-/script>
-    
-</body>
-</html>
+
+debug($list);
+
+?>
+

@@ -1,0 +1,14 @@
+@import 'normal.css';
+
+.done{
+    border:1px solid green;
+}
+.error{
+    border:1px solid red;
+}
+.error-color{
+    color:red;
+}
+.done-color{
+    color:green;
+}
