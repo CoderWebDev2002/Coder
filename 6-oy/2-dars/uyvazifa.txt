@@ -1,0 +1,28 @@
+<?php
+
+
+    $form = new Form(['action'=>'index.php', 'method'=>'POST']);
+
+
+	 $form->inputText(['type'=>'text', 'value'=>'!!!']);
+	//Код выше выведет <input type="text" value="!!!">
+
+	 $form->password(['value'=>'!!!']);
+	//Код выше выведет <input type="password" value="!!!">
+
+	 $form->submit(['value'=>'go']);
+	//Код выше выведет <input type="submit" value="go">
+
+	 $form->textarea(['placeholder'=>'123', 'value'=>'!!!']);
+	//Код выше выведет <textarea placeholder="123">!!!</textarea>
+
+	 
+	//Код выше выведет <form action="index.php" method="POST">
+
+	 $form->close();
+	//Код выше выведет </form>
+
+
+    
+    echo $form;
+?>
